@@ -8,7 +8,7 @@
   "title": "Three GLTF title",
   "displayTitle": "Three GLTF title",
   "body": "This is optional body text.",
-  "instruction": ".",
+  "instruction": "This is the instruction text",
 
   "_scene": {
     "background": "#292524",
@@ -32,8 +32,8 @@
   "_model": {
     "src": "https://threejs.org/examples/models/gltf/LittlestTokyo.glb",
     "scale": 0.01,
-    "ariaLabel": "Little Tokyo 3d model",
-    "description": "This work is based on <a href='https://sketchfab.com/3d-models/little-tokyo-327da9787a6940f69a40e040a71fa4c0'>Little Tokyo</a> by <a href='https://sketchfab.com/SavageSeggwaye'>SavageSeggwaye</a> licensed under <a href='http://creativecommons.org/licenses/by/4.0/'>CC-BY-4.0</a>"
+    "ariaLabel": "Model arial label",
+    "description": "Model description"
   },
   "_pageLevelProgress": {
     "_isEnabled": true
