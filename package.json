@@ -1,0 +1,17 @@
+{
+  "name": "adapt-threeGLTF",
+  "version": "1.0.0",
+  "framework": ">=5.19.1",
+  "homepage": "https://github.com/nachocinalli/adapt-threeGLTF",
+  "bugs": "https://github.com/nachocinalli/adapt-threeGLTF/issues",
+  "component": "threeGLTF",
+  "targetAttribute": "_threeGLTF",
+  "displayName": "Three GLTF loader",
+  "description": "Three GLTF loader component",
+  "main": "/js/adapt-threeGLTF.js",
+  "keywords": [
+    "adapt-plugin",
+    "adapt-component"
+  ],
+  "license": "GPL-3.0"
+}

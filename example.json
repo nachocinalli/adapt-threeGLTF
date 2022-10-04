@@ -1,0 +1,41 @@
+{
+  "_id": "c-05",
+  "_parentId": "b-05",
+  "_type": "component",
+  "_component": "threeGLTF",
+  "_classes": "",
+  "_layout": "full",
+  "title": "Lens",
+  "displayTitle": "Lens Title",
+  "body": "This is optional body text.",
+  "instruction": ".",
+
+  "_scene": {
+    "background": "#292524",
+    "ambientLight": {
+      "color": "0xa0a0fc",
+      "intensity": 0.82
+    },
+    "directionalLight": {
+      "color": "0xe8c37b",
+      "intensity": 1.96,
+      "position": { "x": -69, "y": 44, "z": 14 }
+    }
+  },
+  "_camera": {
+    "fov": 40,
+    "aspect": 2,
+    "near": 1,
+    "far": 100,
+    "position": { "x": 5, "y": 2, "z": 8 }
+  },
+  "_model": {
+    "src": "https://threejs.org/examples/models/gltf/LittlestTokyo.glb",
+    "scale": 0.01,
+    "ariaLabel": "Little Tokyo 3d model",
+    "description": "This work is based on <a href='https://sketchfab.com/3d-models/little-tokyo-327da9787a6940f69a40e040a71fa4c0'>Little Tokyo</a> by <a href='https://sketchfab.com/SavageSeggwaye'>SavageSeggwaye</a> licensed under <a href='http://creativecommons.org/licenses/by/4.0/'>CC-BY-4.0</a>"
+  },
+  "_pageLevelProgress": {
+    "_isEnabled": true
+  }
+}
