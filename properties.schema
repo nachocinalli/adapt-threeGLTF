@@ -1,34 +1,241 @@
 {
-  "type": "object",
-  "$schema": "http://json-schema.org/draft-04/schema",
-  "id": "http://jsonschema.net",
-  "$ref": "http://localhost/plugins/content/component/model.schema",
-  "globals": {
-    "ariaRegion": {
-      "type": "string",
-      "required": true,
-      "default": "",
-      "inputType": "Text",
-      "validators": [],
-      "translatable": true
-    }
-  },
-  "properties": {
-    "_supportedLayout": {
-      "type": "string",
-      "required": true,
-      "enum": ["full-width", "half-width", "both"],
-      "default": "full-width",
-      "editorOnly": true
-    },
-    "instruction": {
-      "type": "string",
-      "required": false,
-      "default": "",
-      "inputType": "Text",
-      "validators": [],
-      "help": "This is the instruction text",
-      "translatable": true
-    }
-  }
+	"type": "object",
+	"$schema": "http://json-schema.org/draft-04/schema",
+	"id": "http://jsonschema.net",
+	"$ref": "http://localhost/plugins/content/component/model.schema",
+	"globals": {
+		"ariaRegion": {
+			"type": "string",
+			"required": true,
+			"default": "",
+			"inputType": "Text",
+			"validators": [],
+			"translatable": true
+		}
+	},
+	"properties": {
+		"_supportedLayout": {
+			"type": "string",
+			"required": true,
+			"enum": ["full-width", "half-width", "both"],
+			"default": "full-width",
+			"editorOnly": true
+		},
+		"instruction": {
+			"type": "string",
+			"required": false,
+			"default": "",
+			"inputType": "Text",
+			"validators": [],
+			"help": "This is the instruction text",
+			"translatable": true
+		},
+		"_model": {
+			"type": "object",
+			"required": true,
+			"title": "3d Model",
+			"properties": {
+				"src": {
+					"type": "string",
+					"required": true,
+					"default": "",
+					"inputType": "Asset:other",
+					"validators": ["required"],
+					"help": "The 3d model file to be used as the source."
+				},
+				"scale": {
+					"type": "number",
+					"required": true,
+					"default": 1,
+					"title": "Scale",
+					"inputType": "Number",
+					"validators": ["required", "number"],
+					"help": ""
+				},
+				"ariaLabel": {
+					"type": "string",
+					"required": false,
+					"default": "",
+					"title": "",
+					"inputType": "Text",
+					"validators": [],
+					"help": "Aria label",
+					"translatable": true
+				},
+				"description": {
+					"type": "string",
+					"required": false,
+					"default": "",
+					"title": "Description",
+					"inputType": "TextArea",
+					"validators": [],
+					"help": "Aria label",
+					"translatable": true
+				}
+			}
+		},
+
+		"_scene": {
+			"type": "object",
+			"required": true,
+			"title": "Scene",
+			"properties": {
+				"background": {
+					"type": "string",
+					"required": false,
+					"default": "",
+					"inputType": "Text",
+					"validators": [],
+					"help": ""
+				},
+				"ambientLight": {
+					"type": "object",
+					"required": true,
+					"title": "Ambient Light",
+					"properties": {
+						"color": {
+							"type": "string",
+							"required": false,
+							"default": "#a0a0fc",
+							"inputType": "Text",
+							"validators": [],
+							"help": ""
+						},
+						"intensity": {
+							"type": "number",
+							"required": false,
+							"default": 1,
+							"inputType": "Number",
+							"validators": [],
+							"help": ""
+						}
+					}
+				},
+				"directionalLight": {
+					"type": "object",
+					"required": true,
+					"title": "Directional Light",
+					"properties": {
+						"color": {
+							"type": "string",
+							"required": false,
+							"default": "#fec261",
+							"inputType": "Text",
+							"validators": [],
+							"help": ""
+						},
+						"intensity": {
+							"type": "number",
+							"required": false,
+							"default": 1,
+							"inputType": "Number",
+							"validators": [],
+							"help": ""
+						},
+						"position": {
+							"type": "object",
+							"required": true,
+							"title": "Position",
+							"properties": {
+								"x": {
+									"type": "number",
+									"required": false,
+									"default": 0,
+									"inputType": "Number",
+									"validators": [],
+									"help": ""
+								},
+								"y": {
+									"type": "number",
+									"required": false,
+									"default": 0,
+									"inputType": "Number",
+									"validators": [],
+									"help": ""
+								},
+								"z": {
+									"type": "number",
+									"required": false,
+									"default": 0,
+									"inputType": "Number",
+									"validators": [],
+									"help": ""
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"_camera": {
+			"type": "object",
+			"required": true,
+			"title": "Camera",
+			"properties": {
+				"fov": {
+					"type": "number",
+					"required": false,
+					"default": 0,
+					"inputType": "Number",
+					"validators": [],
+					"help": ""
+				},
+				"aspect": {
+					"type": "number",
+					"required": false,
+					"default": 1,
+					"inputType": "Number",
+					"validators": [],
+					"help": ""
+				},
+				"near": {
+					"type": "number",
+					"required": false,
+					"default": 1,
+					"inputType": "Number",
+					"validators": [],
+					"help": ""
+				},
+				"far": {
+					"type": "number",
+					"required": false,
+					"default": 100,
+					"inputType": "Number",
+					"validators": [],
+					"help": ""
+				},
+				"position": {
+					"type": "object",
+					"required": true,
+					"title": "Position",
+					"properties": {
+						"x": {
+							"type": "number",
+							"required": false,
+							"default": 0,
+							"inputType": "Number",
+							"validators": [],
+							"help": ""
+						},
+						"y": {
+							"type": "number",
+							"required": false,
+							"default": 0,
+							"inputType": "Number",
+							"validators": [],
+							"help": ""
+						},
+						"z": {
+							"type": "number",
+							"required": false,
+							"default": 0,
+							"inputType": "Number",
+							"validators": [],
+							"help": ""
+						}
+					}
+				}
+			}
+		}
+	}
 }
